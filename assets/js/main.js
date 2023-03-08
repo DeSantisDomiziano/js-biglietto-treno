@@ -30,11 +30,13 @@ if (userAge <= 0 || userAge > 110) {
 if (userAge < 18 ) {
     //prezzo minorenne
     const ticketPrice =  (userDistance * 0.21) - (userDistance * 0.21 / 100 * 20)
-    document.getElementById("prezzo").innerHTML = ` ${ticketPrice.toFixed(2)}€ `
+    document.getElementById("prezzo").innerHTML = `Il prezzo del suo biglietto è: ${ticketPrice.toFixed(2)}€ `
 } else if  (userAge >= 65) {
+    // prezzo over 65
     const ticketPrice =  (userDistance * 0.21) - (userDistance * 0.21 / 100 * 40)
-    document.getElementById("prezzo").innerHTML = ` ${ticketPrice.toFixed(2)}€ `
+    document.getElementById("prezzo").innerHTML = `Il prezzo del suo biglietto è: ${ticketPrice.toFixed(2)}€ `
 } else {
+    //prezzo normale
     const ticketPrice =  userDistance * 0.21
-    document.getElementById("prezzo").innerHTML = ` ${ticketPrice.toFixed(2)}€ `
+    document.getElementById("prezzo").innerHTML = `Il prezzo del suo biglietto è: ${ticketPrice.toFixed(2)}€ `
 }
